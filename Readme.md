@@ -53,7 +53,8 @@ function solution(shoes) {
   return !Object.values(pairs).some(value => value);
 }
 
-===== Solution 2========.
+===== Solution 2========
+
 function solution(shoes) { 
  const result = shoes.reduce((acc, [side, size]) => {
   const action = side ? 1 : -1
