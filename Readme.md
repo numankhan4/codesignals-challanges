@@ -52,3 +52,23 @@ function solution(shoes) {
   }, {});
   return !Object.values(pairs).some(value => value);
 }
+
+===== Solution 2========.
+function solution(shoes) { 
+ const result = shoes.reduce((acc, [side, size]) => {
+  const action = side ? 1 : -1
+  console.log("actions", action);
+   
+  acc[size]
+    ? acc[size] += action
+    : acc[size] = action
+     console.log(acc)
+  return acc;
+ }, {});
+
+ return Object
+  .values(result)
+  .every((item) => item === 0); 
+ }
+
+ console.log(solution([[0, 21], [1, 23], [1, 21], [0, 23]]));
